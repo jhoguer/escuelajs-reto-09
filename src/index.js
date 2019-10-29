@@ -9,6 +9,9 @@ app.get('/', (req, res) => {
   res.send(`UserInfo: ${userInfo}`);
 });
 
+
+app.use(express.json());
+
 platziStore(app);
 
 app.listen(config.port, err => {
